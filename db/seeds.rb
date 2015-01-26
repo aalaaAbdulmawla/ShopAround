@@ -7,16 +7,16 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
 
-$i = 1
-$num = 5
+# $i = 1
+# $num = 5
 
-until $i > $num  do
-	Product.create!(title:"Item ##{$i}",
-					description:
-						%{<p>
-							Description Of Item ##{$i} 
-						</p>},
-					image_url:'item.jpg',
-					price: "#{$i*10}" )
-	$i += 1;
-end 
+# until $i > $num  do
+# 	Product.create!(title:"Item ##{$i}",
+# 					description:
+# 						%{<p>
+# 							Description Of Item ##{$i} 
+# 						</p>},
+# 					image_url:'item.jpg',
+# 					price: "#{$i*10}" )
+# 	$i += 1;
+# end 
