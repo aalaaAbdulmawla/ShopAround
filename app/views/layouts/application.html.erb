@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BuyIt</title>
+  <title>Shop Around</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+	
+	<meta name="keywwords" content="Shop Around - Great free html template for on-line shop. Use it as a start point for your on line business. The template can be easily implemented in many open source E-commerce platforms" />
+	<meta name="description" content="Shop Around - Great free html template for on-line shop. Use it as a start point for your on line business. The template can be easily implemented in many open source E-commerce platforms" />
+	
+	<!-- JS -->
+	<script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>	
+	<script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>	
+	<script src="js/jquery-func.js" type="text/javascript"></script>	
+	<!-- End JS -->
 </head>
 <body>
-
-<%= yield %>
-
+<!-- Shell -->	
+	<div class="shell">
+		<%= render 'layouts/header' %>
+			<%= yield %>
+		<%= render 'layouts/footer' %>
+	</div>	
+<!-- End Shell -->
 </body>
 </html>
