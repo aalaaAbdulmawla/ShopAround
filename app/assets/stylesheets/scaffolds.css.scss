@@ -5,7 +5,12 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
-
+.new{
+  text-align :center;
+  background-color : #ebebeb;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -41,12 +46,14 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  color :white;
+  background-color: #8b0000;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
+  margin-left:250px;
   border: 2px solid red;
   padding: 7px;
   padding-bottom: 0;
@@ -59,11 +66,11 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0px;
-    background-color: #c00;
+    background-color: #8b0000;
     color: #fff;
   }
   ul li {
     font-size: 12px;
-    list-style: square;
+    list-style: none;
   }
 }
