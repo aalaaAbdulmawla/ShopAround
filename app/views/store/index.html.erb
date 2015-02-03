@@ -109,8 +109,7 @@
               <li><a href="#">Category 9</a></li>
               <li><a href="#">Category 10</a></li>
               <li><a href="#">Category 11</a></li>
-              <li><a href="#">Category 12</a></li>
-              <li class="last"><a href="#">Category 13</a></li>
+              <li class="last"><a href="#">Category 12</a></li>
           </ul>
         </div>
       </div>
@@ -129,12 +128,7 @@
     <!-- More Products -->
     <div class="more-products">
       <div class="more-products-holder">
-        <ul>
-          <% Product.all.limit(Product.all.count - 1).each do |product|%>
-            <li><%= link_to image_tag(product.image_url, :title => product.title, :alt => product.title.capitalize), url_for(product) %></li>
-          <% end%>
-            <li class="last"><%= link_to image_tag(Product.last.image_url, :title => Product.last.title, :alt => Product.last.title.capitalize), url_for(Product.last) %></li>
-        </ul>
+        <%= render partial: "more_products" %>
       </div>
       <div class="more-nav">
         <a href="#" class="prev">previous</a>
@@ -143,32 +137,7 @@
     </div>
     <!-- End More Products -->
     
-    <!-- Text Cols -->
-    <div class="cols">
-      <div class="cl">&nbsp;</div>
-      <div class="col">
-        <h3 class="ico ico1">Donec imperdiet</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
-      </div>
-      <div class="col">
-        <h3 class="ico ico2">Donec imperdiet</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
-      </div>
-      <div class="col">
-        <h3 class="ico ico3">Donec imperdiet</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
-      </div>
-      <div class="col col-last">
-        <h3 class="ico ico4">Donec imperdiet</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet, metus ac cursus auctor, arcu felis ornare dui.</p>
-        <p class="more"><a href="#" class="bul">Lorem ipsum</a></p>
-      </div>
-      <div class="cl">&nbsp;</div>
-    </div>
-    <!-- End Text Cols -->
+    <%= render partial: 'text_col'%>
     
   </div>
   <!-- End Side Full -->
