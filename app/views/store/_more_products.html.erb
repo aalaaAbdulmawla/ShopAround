@@ -6,6 +6,10 @@
           <li>
           <%= link_to image_tag(product.image_url, :title => product.title, 
           :alt => product.title.capitalize), url_for(product) %>
+            <button class="button">
+              <div class="title">Add to cart</div>
+              <div class="price">$9,99</div>
+            </button>
            </li>
         <% end %>              
       <% end %>

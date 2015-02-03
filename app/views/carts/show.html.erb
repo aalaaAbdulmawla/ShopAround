@@ -1,0 +1,30 @@
+<% if notice != nil%>
+	<p id="notice" class="notice-exceplanation"><%= notice %></p>
+<% end %>
+<h1 class="page-header">Your Cart</h1>
+
+<table>
+  <thead class="table-head">
+    <tr>
+      <th>Item Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cart.line_items.each do |item| %>
+      <tr>
+        <td><%= item.product.title %></td>
+        <td ><%= image_tag item.product.image_url_url, :class => 'product-image' %></td>
+        <td><%= number_to_currency (item.product.price)%></td>
+        <td><%= link_to 'Show', item.product %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
