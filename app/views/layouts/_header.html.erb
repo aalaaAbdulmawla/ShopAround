@@ -7,9 +7,9 @@
 			<% if @cart != nil and session[:cart_id] != nil %>
 				<%= link_to 'Your Shopping Cart', @cart, :class => 'cart-link' %>
 				<div class="cl">&nbsp;</div>
-				<strong><%= pluralize(@cart.total_items_count, 'Item')%></strong>
+				<strong id="cart-items-cout"><%= pluralize(@cart.total_items_count, 'Item')%></strong>
 				&nbsp;&nbsp;
-				<span>Cost: <strong><%= number_to_currency (@cart.total_price)%></strong></span>
+				<span>Cost: <strong id="cart-items-price"><%= number_to_currency (@cart.total_price)%></strong></span>
 			<% else %>
 				<a href="#" class="cart-link">Your Shopping Cart</a>
 			<% end %>

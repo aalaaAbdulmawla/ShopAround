@@ -22,7 +22,7 @@
 	  <%= @product.price %>
 	</p>
 	<p>
-		<%=button_to'Add to Cart',line_items_path(product_id:@product), :class => 'button'%> 
+		<%=button_to'Add to Cart',line_items_path(product_id:@product), :class => 'button', remote: true%> 
 	</p>
 </div>
 <p class="clear"></p>

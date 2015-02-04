@@ -1,0 +1,2 @@
+$('#cart-items-cout').html("<%= pluralize(@cart.total_items_count, 'Item')%>");
+$('#cart-items-price').html("<%= number_to_currency (@cart.total_price)%>");
