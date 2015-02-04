@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+jQuery('#yourcarousel').jcarousel({
+    scroll: 1,
+    visible: 1,
+    animation: 3000,
+    auto: 8,
+    wrap: 'circular',
+    itemFallbackDimension: 300
+});
