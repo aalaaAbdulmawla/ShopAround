@@ -37,24 +37,11 @@
       <!-- End Content Slider -->
       
       <!-- Products -->
-      <div class="products">
-        <div class="cl">&nbsp;</div>
-        <ul>
-          <% Product.all.limit(3).each do |product| %>
-            <li>
-              <%= link_to image_tag(product.image_url, :title => product.title, :alt => product.title.capitalize), url_for(product) %>
-              <div class="product-info">
-                <h3><%= product.title %></h3>
-                <div class="product-desc">
-                <h4>WOMEN’S</h4>
-                  <p><%= product.description %></p>
-                  <strong class="price"><%= number_to_currency (product.price)%></strong>
-                </div>
-              </div>
-            </li>
-          <% end %>
-        </ul>
-        <div class="cl">&nbsp;</div>
+      <div class="products-catalog">
+       <table>
+        <%= render :partial => '/products/products', :products => @Products %>
+
+       </table>
       </div>
       <!-- End Products -->
       
@@ -149,3 +136,4 @@
     
   </div>
   <!-- End Side Full -->
+

@@ -1,0 +1,11 @@
+.products-catalog table {
+	width: 725px;
+}
+.products-catalog table tr td{
+
+	border-right: solid 1px #8b0000;
+}
+.products-catalog img{
+	width: 110px;
+	height: 200px;
+}

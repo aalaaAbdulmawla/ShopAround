@@ -1,0 +1,22 @@
+<h1 class="page-header">Your Cart</h1>
+
+<table>
+  <thead class="table-head">
+    <tr>
+      <th>Item Name</th>
+      <th>Image</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <%= render (@cart.line_items) %>
+      <tr>
+        <td colspan="2">Total</td>
+        <td ><%= @cart.line_items.sum(:quantity)%></td>
+        <td colspan="3"><%= number_to_currency (@cart.total_price)%></td>
+      </tr>
+  </tbody>
+</table>
