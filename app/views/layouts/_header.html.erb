@@ -4,11 +4,17 @@
 		
 		<!-- Cart -->
 		<div id="cart">
-			<a href="#" class="cart-link">Your Shopping Cart</a>
-			<div class="cl">&nbsp;</div>
-			<span>Articles: <strong>4</strong></span>
-			&nbsp;&nbsp;
-			<span>Cost: <strong>$250.99</strong></span>
+			<% if @cart != nil and session[:cart_id] != nil %>
+				<%= link_to 'Your Shopping Cart', @cart, :class => 'cart-link' %>
+				<div class="cl">&nbsp;</div>
+				<strong><%= pluralize(@cart.total_items_count, 'Item')%></strong>
+				&nbsp;&nbsp;
+				<span>Cost: <strong><%= number_to_currency (@cart.total_price)%></strong></span>
+			<% else %>
+				<a href="#" class="cart-link">Your Shopping Cart</a>
+			<% end %>
+			
+			
 		</div>
 		<!-- End Cart -->
 		
