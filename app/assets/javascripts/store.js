@@ -1,0 +1,1 @@
+jQuery('#slider-holder').jcarousel({ scroll :1, itemFallbackDimension:588 })
