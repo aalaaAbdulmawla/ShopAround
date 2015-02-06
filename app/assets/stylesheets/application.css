@@ -26,7 +26,7 @@ table{
 td{
 	border-bottom: 1px solid #8b0000;
 }
-	.table-head{
+.table-head{
 	background-color: #8b0000;
 	color: white;
 }
@@ -34,4 +34,40 @@ td{
 .product-image{
 	width: 50px;
 	height: 50px;
+}
+
+/*Form Style*/
+
+.shop_around_form{
+	margin-top: 10px;
+}
+
+.shop_around_form	fieldset{
+		/*background: #efe;*/
+}
+.shop_around_form fieldset legend{
+		color: white;
+		background:#8b0000;
+		font-family:sans-serif;
+		padding:0.2em 1em;
+}
+
+
+.shop_around_form form select, .shop_around_form form select textarea, .shop_around_form form select input{
+	display: inline-block;
+  	float: left;
+}
+.shop_around_form	form label{
+	margin-right: 10px;
+	display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+.shop_around_form	form .submit{
+	margin-left:4em;
+}
+.shop_around_form form br{
+	display:none
 }

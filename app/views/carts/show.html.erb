@@ -8,3 +8,4 @@
 <%= link_to 'Back', carts_path %>
 <%= button_to'Empty cart',@cart, method: :delete,
     data:{confirm:'Are you sure?'}%>
+<%= button_to 'Checkoutt', new_order_path, method: :get%>
