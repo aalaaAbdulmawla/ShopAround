@@ -1,0 +1,9 @@
+<h3>Shop Around Order Shipped</h3>
+<p>
+	We are happy to tell you that your order was shipped </br>
+	Thank you for shopping from Shop Around online store.
+</p>
+<table>
+	<tr><thcolspan="2">Qty</th><th>Description</th></tr>
+	<%= render @order.line_items -%>
+</table>
