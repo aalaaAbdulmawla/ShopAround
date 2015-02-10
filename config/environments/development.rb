@@ -15,19 +15,21 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "alaa.abdelmawla@gmail.com",
-    authentication: "plain",
-    user_name: "aalaa",
-    password: "123456",
-    enable_starttls_auto: true
-  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+  # Gmail SMTP server setup
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :enable_starttls_auto => true,
+    :port => 587,
+    :authentication => :plain,
+    :user_name => "alaa.abdulmawla@gmail.com",
+    :password => 'aya3303540'
+  }
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load

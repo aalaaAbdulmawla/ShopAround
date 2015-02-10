@@ -5,7 +5,7 @@ class OrderNotifierTest < ActionMailer::TestCase
     mail = OrderNotifier.received(orders(:one))
     assert_equal "Shop Around Order Confirmation", mail.subject
     assert_equal ["alaa.abdulmawla@gmail.com"], mail.to
-    assert_equal ["aalaa.abdelmawla@gmail.com"], mail.from
+    assert_equal ["alaa.abdulmawla@gmail.com"], mail.from
     assert_match /1 x MyString/, mail.body.encoded
   end
 
@@ -13,7 +13,7 @@ class OrderNotifierTest < ActionMailer::TestCase
     mail = OrderNotifier.shipped(orders(:one))
     assert_equal "Shop Around Order Shipped", mail.subject
     assert_equal ["alaa.abdulmawla@gmail.com"], mail.to
-    assert_equal ["aalaa.abdelmawla@gmail.com"], mail.from
+    assert_equal ["alaa.abdulmawla@gmail.com"], mail.from
     assert_match /<td>&times;1<\/td>/, mail.body.encoded
   end
 
