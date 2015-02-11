@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'admin' => 'admin#index'
+  get 'account' => 'static_pages#Account'
+
+  get 'admin'   => 'admin#index'
 
   controller :sessions do
     get    'login'      => :new
